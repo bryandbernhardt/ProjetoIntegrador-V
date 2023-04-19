@@ -1,0 +1,27 @@
+header {
+  background-color: #2EC4B6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: -webkit-fill-available;
+}
+
+ul.navbar {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
