@@ -32,7 +32,26 @@
     <a href="#" class='bold'>Login</a>
   </header>
   <body>
-    <h2>Login</h2>
+    <main>
+      <h2>Login</h2>
+      <form action="../../controller/loginController.php" method="post">
+        <div class=pages_group>
+          <div class=form_page>
+            <label>
+              <span>E-mail:</span>
+              <input type="email" name="email" id="email" placeholder='yourname@mail.com' required maxlength="250" />
+            </label>
+            <label>
+              <span>Senha:</span>
+              <input type="password" name='senha' id="senha" placeholder='*******' minlength="8" maxlength="250" required />
+            </label>
+            <div class=buttons>
+              <input class=button type="submit" value="Entrar" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
   </body>
 </body>
 </html>
