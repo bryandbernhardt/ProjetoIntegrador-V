@@ -2,3 +2,15 @@ h2 {
   text-align: center;
   margin: 15px 15px;
 }
+
+.form_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}

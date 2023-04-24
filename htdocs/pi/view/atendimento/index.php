@@ -32,7 +32,7 @@
     <a href="../login" class='bold'>Login</a>
   </header>
   <main>
-  <form action="../../controller/cadastrarAtendimento.php" method="post">
+    <form action="../../controller/cadastrarAtendimento.php" method="post">
       <div class=pages_group>
         <div class=form_page>
           <label>
