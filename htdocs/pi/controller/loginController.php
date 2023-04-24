@@ -21,6 +21,5 @@ $login = $usuario->verificaLogin();
 if($login) {
   header('location: ../view/private/atendimentos/');
 } else {
-	echo $login;
-	//header('location: ../view/');
+	header('location: ../view/');
 }
