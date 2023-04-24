@@ -1,15 +1,19 @@
 <?php
+require_once 'UserData.php';
+
 class User {
   // DECLARAÇÃO DE ATRIBUTO
-  private $email;
-  private $senha;
+  public $email;
+  public $senha;
+  private $senhaDesc;
 
   // DECLARAÇÃO DE MÉTODO
-  private function setEmail($email) {
+  public function setEmail($email) {
     $this->email = $email;
   }
 
-  private function setSenha($senha) {
+  public function setSenha($senha) {
+    $this->senhaDesc = $senha;
     $senha_criptada = password_hash($senha, PASSWORD_BCRYPT);
     $this->senha = $senha_criptada;
   }
@@ -22,14 +26,20 @@ class User {
     //TODO: salvar dados no banco
     $this->setEmail($email);
     $this->setSenha($senha);
-    
+    $userData = new UserData();
+
+    $userData->insertUsuario($this);
   }
 
-  public function verificaSenha($senha) {
-    if(password_verify($senha, $this->senha)) {
+  public function verificaLogin() {
+    session_start();
+    $userData = new UserData();
+    $userData->getCredenciais($this);
+    if(password_verify($this->senhaDesc, $this->senha)) {
       return true;
-      //TODO: Método de logar no controller
+    } else {
+      return false;
     }
-    return false;
+    
   }
-}
+};

@@ -29,7 +29,10 @@
         </div>
       </nav>
     </div>
-    <a href="../login" class='bold'>Login</a>
+    <div>
+      <a href="../registrar" class='bold'>Registrar</a>
+      <a href="../login" class='bold'>| Login</a>
+    </div>
   </header>
   <main>
   <h2>Prevenções</h2>
